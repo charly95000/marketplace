@@ -1,0 +1,253 @@
+html, #img-cont {
+  scroll-behavior: smooth;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+  }
+ header ul{
+  float:right
+ }
+  .old-price{
+    text-decoration:line-through;
+  }
+
+  section{
+    padding-top: 50px;
+
+  }
+
+  .price{
+    color:red
+  }
+  
+  li {
+    float: left;
+  }
+
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+ ul li a:hover {
+    color: #ffffff;
+    background-color: #28a745;
+    text-decoration: none;
+  }
+
+
+
+header{
+    overflow: hidden;
+    z-index: 99;
+    height:70px;
+    width:100%;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    border-bottom: solid black;
+    transition: 0.5s;
+    
+}
+
+.fond{
+  background-image: url('../img/fond.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  position: relative;
+}
+
+.accueil{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+.burger {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color:#28a745;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.sidebar {
+  height: 100%;
+  position: fixed;
+  z-index: 99;
+  top: 70px;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+
+
+
+.card-header{
+  background-color: #9fdaa8 !important
+}
+
+.banniere{
+  height:40vh;
+  background-image: linear-gradient(90deg,rgb(0,0,0,0.5) 50%,rgb(255,255,255,0)),url('../img/adidas.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+.etablissement{
+  background-color: #ffffff;
+  color:#000000;
+}
+
+.tag{
+  border: thin solid rgb(0, 0, 0, 0.125)
+}
+
+.tag .badge{
+  font-size: 15px;
+}
+
+.tag .badge:hover{
+  cursor: pointer;
+}
+
+
+
+.add-panier{
+  position: absolute;
+  z-index: 2;
+  top:0;
+  left:0;
+  height:0;
+  width: 100%;
+  background-color: rgb(255, 255, 255, 0.5);
+  font-size: 20px;
+  color:#FFFFFF;
+  overflow-y: hidden;   
+  transition: 0.5s;
+}
+
+.produit{
+  cursor: pointer;
+}
+
+.row{
+  margin-left:0 !important;
+  margin-right: 0!important;
+}
+
+.container-produits{
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 70px;
+  height:100%
+}
+
+.filtre{
+  position: -webkit-sticky;
+    position: sticky;
+    top:70px;
+    overflow-y:auto;
+    width: 200px;
+    height:80vh;
+    background-color: #DDDDDD
+    
+}
+
+.closebtn {
+  position: fixed;
+  top: 70px;
+  left: -5px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#menu-btn{
+  display: none;
+}
+
+
+@media(max-width :767px){
+  .filtre{
+    height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      background-color: #FFFFFF;
+      overflow-y:auto;
+      transition: 0.5s;
+      padding-top: 70px;
+      border-left: solid #28a745
+  }
+  #menu-btn{
+    float:right;
+    display: initial;
+  }
+  
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+.img-cont{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.img-etablisement{
+  flex: 0 0 auto;
+}
+.img-cont::-webkit-scrollbar {
+  height: 0px;
+}
+.header-section{
+  display: inline;
+}
+
+

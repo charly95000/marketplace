@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="gneu gneu commerce" />
+        <meta name="author" content="Charly Wandja Mefire" />
+        <title>Market</title>
+
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Russo+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+        <link href="css/style.css" rel="stylesheet" />
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
+    </head>
+
+    <body>
+      
+        <header  class="the-header">
+            <nav>
+                <div class="burger p-2" onclick="myFunction(this);changeNav()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </div>
+                    <ul>
+                        <li><a class="m-2 p-2"><i class="fa fa-shopping-cart fa-2x" style="color:#000000"></i><span class="badge badge-success">9</span></a></li>
+                        <li><a class="m-2 p-2" href="#">Se connecter</a></li>
+                    </ul>              
+            </nav>
+            
+        </header>
+        <nav id="mySidebar" class="sidebar shadow-lg" style="width:0px">
+            <ul class="navbar-nav flex-column px-5">
+              <li class="nav-item mb-5">
+                <a class="nav-link  text-center" onclick="closeNav()"  href="#profil" >Vetements</a>
+                </li>
+              <li class="nav-item mb-5">
+                  <a class="nav-link  text-center" onclick="closeNav()"  href="#realisations" >Alimentation</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-center" onclick="closeNav()"  href="#contact" >Restaurants</a>
+            </li>
+              
+          </ul>
+        </nav>
+        
+        <div class="container-produits">
+          <div class="banniere my-3 p-3">
+            <div class="etablissement col-5 m-5 p-3 shadow">
+              <h2>ADIDAS</h2>
+              <p>Lun-Dim 8:00 - 20:00</p>
+              <p>1 Grande rue, Dieppe</p>
+            </div>
+          </div>
+            <div class="tag p-2">
+                <span class="badge badge-success">Chaussures</span>
+                <span class="badge badge-success">t-shirt</span>
+                <span class="badge badge-success">short</span>
+                <span class="badge badge-success">jogging</span>
+                
+            </div>
+            <div class="trie py-2 ">
+              <button id="menu-btn" class="btn btn-success openbtn shadow-lg" onclick="openNav()">Filtrer</button> 
+              <form class="form-trie form-inline">
+                <label for="trie">Trier par : </label>
+                <select class="custom-select mr-sm-2" id="trie">
+                  <option selected>Popularité</option>
+                  <option value="1">Prix - +</option>
+                  <option value="2">Prix + -</option>
+                  <option value="3">Nouveauté</option>
+                </select>
+              </form>
+            </div>
+            
+
+            <section>
+              <div class="row">
+                <div id="filtre" class="filtre">
+                  <div class="px-5 p-md-2">
+                    <h5>Categorie</h5>
+                    <form class="mb-5">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Short
+                        </label>
+                      </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                          <label class="form-check-label" for="exampleRadios1">
+                            Chemise
+                          </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Chaussettes
+                        </label>
+                      </div>
+                    </form>
+                    <form class="mb-5">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Short
+                        </label>
+                      </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                          <label class="form-check-label" for="exampleRadios1">
+                            Chemise
+                          </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Chaussettes
+                        </label>
+                      </div>
+                    </form>
+                    <form class="mb-5">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Short
+                        </label>
+                      </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                          <label class="form-check-label" for="exampleRadios1">
+                            Chemise
+                          </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Chaussettes
+                        </label>
+                      </div>
+                    </form>
+                    <form class="mb-5">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Short
+                        </label>
+                      </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                          <label class="form-check-label" for="exampleRadios1">
+                            Chemise
+                          </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Chaussettes
+                        </label>
+                      </div>
+                    </form>
+                    <form class="mb-5">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Short
+                        </label>
+                      </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                          <label class="form-check-label" for="exampleRadios1">
+                            Chemise
+                          </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Chaussettes
+                        </label>
+                      </div>
+                    </form>
+                    <h5>Taille</h5>
+                    <form>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          XS
+                        </label>
+                      </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                          <label class="form-check-label" for="exampleRadios1">
+                            M
+                          </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          XXXL
+                        </label>
+                      </div>
+                    </form>
+
+                  </div>
+
+                </div>
+                <div class=" col produits-box">
+                  <div class="border-0 card">
+                    <div class="card-header">
+                      Populaire
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-2 col-lg-3 col-md-6 col-12">
+                                <div class=" produit border-0 mb-5" >
+                                    <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+                          
+                                      <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                                      <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                                        
+                                      
+                                    
+                                    <div class="add-panier text-center">
+                                      <p>Ajouter au panier</p>
+                                      <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                              <div class=" produit border-0 mb-5" >
+                                  <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+                        
+                                    <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                                    <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                                      
+                                    
+                                  
+                                  <div class="add-panier text-center">
+                                    <p>Ajouter au panier</p>
+                                    <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                                  </div>
+                              </div>
+                              
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-12">
+                            <div class=" produit border-0 mb-5" >
+                                <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+                      
+                                  <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                                  <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                                    
+                                  
+                                
+                                <div class="add-panier text-center">
+                                  <p>Ajouter au panier</p>
+                                  <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                          <div class=" produit border-0 mb-5" >
+                              <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+                    
+                                <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                                <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                                  
+                                
+                              
+                              <div class="add-panier text-center">
+                                <p>Ajouter au panier</p>
+                                <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                              </div>
+                          </div>
+                          
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-12">
+                                <div class=" produit border-0 mb-5" >
+                                    <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+                          
+                                      <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                                      <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                                        
+                                      
+                                    
+                                    <div class="add-panier text-center">
+                                      <p>Ajouter au panier</p>
+                                      <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                              <div class=" produit border-0 mb-5" >
+                                  <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+                        
+                                    <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                                    <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                                      
+                                    
+                                  
+                                  <div class="add-panier text-center">
+                                    <p>Ajouter au panier</p>
+                                    <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                                  </div>
+                              </div>
+                              
+                          </div>
+                          <div class="col-lg-3 col-md-6 col-12">
+                            <div class=" produit border-0 mb-5" >
+                                <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+                      
+                                  <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                                  <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                                    
+                                  
+                                
+                                <div class="add-panier text-center">
+                                  <p>Ajouter au panier</p>
+                                  <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-12">
+                          <div class=" produit border-0 mb-5" >
+                              <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+                    
+                                <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                                <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                                  
+                                
+                              
+                              <div class="add-panier text-center">
+                                <p>Ajouter au panier</p>
+                                <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                              </div>
+                          </div>
+                          
+                      </div>
+                      <div class="col-lg-3 col-md-6 col-12">
+                        <div class=" produit border-0 mb-5" >
+                            <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+                  
+                              <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                              <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                                
+                              
+                            
+                            <div class="add-panier text-center">
+                              <p>Ajouter au panier</p>
+                              <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-12">
+                      <div class=" produit border-0 mb-5" >
+                          <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+                
+                            <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                            <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                              
+                            
+                          
+                          <div class="add-panier text-center">
+                            <p>Ajouter au panier</p>
+                            <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                          </div>
+                      </div>
+                      
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-12">
+                    <div class=" produit border-0 mb-5" >
+                        <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+              
+                          <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                          <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                            
+                          
+                        
+                        <div class="add-panier text-center">
+                          <p>Ajouter au panier</p>
+                          <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                  <div class=" produit border-0 mb-5" >
+                      <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+            
+                        <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                        <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                          
+                        
+                      
+                      <div class="add-panier text-center">
+                        <p>Ajouter au panier</p>
+                        <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                      </div>
+                  </div>
+                  
+              </div>
+              <div class="col-lg-3 col-md-6 col-12">
+                <div class=" produit border-0 mb-5" >
+                    <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+          
+                      <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                      <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                        
+                      
+                    
+                    <div class="add-panier text-center">
+                      <p>Ajouter au panier</p>
+                      <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class=" produit border-0 mb-5" >
+                  <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+        
+                    <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                    <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                      
+                    
+                  
+                  <div class="add-panier text-center">
+                    <p>Ajouter au panier</p>
+                    <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                  </div>
+              </div>
+              
+          </div>
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class=" produit border-0 mb-5" >
+                <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+      
+                  <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                  <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                    
+                  
+                
+                <div class="add-panier text-center">
+                  <p>Ajouter au panier</p>
+                  <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class=" produit border-0 mb-5" >
+              <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
+    
+                <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+                  
+                
+              
+              <div class="add-panier text-center">
+                <p>Ajouter au panier</p>
+                <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+              </div>
+          </div>
+          
+      </div>
+      
+                            
+                        </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+                
+                    
+            </section>
+            
+        </div>
+      
+        <script>
+        function initialize() {
+            var input = document.getElementById('searchTextField');
+            new google.maps.places.Autocomplete(input);
+          }
+          
+          google.maps.event.addDomListener(window, 'load', initialize);
+            function myFunction(x) {
+              x.classList.toggle("change");
+            }
+    function changeNav() {
+        if(document.getElementById("mySidebar").style.width == "0px"){
+            document.getElementById("mySidebar").style.width = "250px";
+            
+        }
+        else{
+            document.getElementById("mySidebar").style.width = "0px";
+            
+        }
+    }
+
+    function openNav() {
+      document.getElementById("filtre").style.width = "200px";
+    }
+
+    function closeNav() {
+      document.getElementById("filtre").style.width = "0";
+    }
+
+    window.onclick = function(event) {
+  if (event.target != document.getElementById("filtre") && event.target != document.getElementById("menu-btn") && window.innerWidth < 768 ) {
+    document.getElementById("filtre").style.width = "0";
+  }
+}
+  </script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/4bd820fde1.js"></script>
+        <script>
+          $(document).ready(function() {
+            $('.produit').mouseenter(function() {
+              $(this).children('.add-panier').css("height","100%");
+            })
+
+            $('.produit').mouseleave(function() {
+              $(this).children('.add-panier').css("height","0");
+            })
+
+            var position=$(window).scrollTop(); 
+            $(window).scroll(function(){
+            var scroll = $(this).scrollTop();
+            if (scroll > position){
+                $('header').css("height","0");
+            } else {
+              $('header').css("height","70px");
+            }
+            position = scroll;
+          });
+          
+
+          
+
+            
+        });
+        
+      </script>
+    </body>
+
+</html>

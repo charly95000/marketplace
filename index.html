@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="gneu gneu commerce" />
+        <meta name="author" content="Charly Wandja Mefire" />
+        <title>Market</title>
+
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Russo+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+        <link href="css/style.css" rel="stylesheet" />
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
+    </head>
+
+    <body>
+        <header  class="">
+            <nav>
+                <div class="burger p-2" onclick="myFunction(this);changeNav()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                  </div>
+                    <ul>
+                        <li><a class="m-2 p-2"><i class="fa fa-shopping-cart fa-2x" style="color:#000000"></i><span class="badge badge-success">9</span></a></li>
+                        <li><a class="m-2 p-2" href="#">Se connecter</a></li>
+                    </ul>
+                        
+                    
+                
+                    
+                </ul>
+            </nav>
+            
+        </header>
+        <nav id="mySidebar" class="sidebar shadow-lg" style="width:0px">
+            <ul class="navbar-nav flex-column px-5">
+              <li class="nav-item mb-5">
+                <a class="nav-link  text-center" onclick="changeNav()"  href="./vetements.html" >Vetements</a>
+                </li>
+              <li class="nav-item mb-5">
+                  <a class="nav-link  text-center" onclick="closeNav()"  href="#realisations" >Alimentation</a>
+              </li>
+              <li class="nav-item mb-5">
+                <a class="nav-link text-center" onclick="closeNav()"  href="#contact" >Restaurants</a>
+            </li>
+            <li class="nav-item mb-5">
+              <a class="nav-link  text-center" onclick="changeNav()"  href="./vetements.html" >Vetements</a>
+              </li>
+            <li class="nav-item mb-5">
+                <a class="nav-link  text-center" onclick="closeNav()"  href="#realisations" >Alimentation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-center" onclick="closeNav()"  href="#contact" >Restaurants</a>
+          </li>
+              
+          </ul>
+        </nav>
+        <div class="fond">
+            <div class="accueil text-center">
+                <h1>Marcket place dieppe</h1>
+                <form class="row">
+                    <input class="form-control col-10" id="searchTextField" type="text" size="50"><button class="btn  btn-success my-2 my-sm-0 col-2" type="submit">Search</button>
+
+                </form>
+            </div>
+            
+        </div>
+        <div class="container">
+            <section>
+                <h2>Offres speciales !!</h2>
+                <div class="row">
+                    <div class="col-lg-4 col-12 py-5">
+                        <div class="card shadow-sm mb-5" style="height: 100%">
+                            <img class="card-img-top shadow" src="img/croissant.jpg" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Croissant</h5>
+                                <h6 class="card-subtitle mb-2"><span class="price">0,60$</span> <span class="text-muted old-price">1$<span></h6>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-success shadow-lg">J'en profite </a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-lg-4 col-12 py-5">
+                        <div class="card shadow-sm" style="height: 100%">
+                            <img class="card-img-top shadow" src="img/croissant.jpg" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Croissant à <span class="price">0,60$</span> <span class="text-muted old-price">1$<span> </h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-success shadow-lg">J'en profite</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-lg-4 col-12 py-5">
+                        <div class="card shadow-sm" style="height: 100%">
+                            <img class="card-img-top shadow" src="img/croissant.jpg" alt="Card image cap">
+                            <div class="card-body">
+                              <h5 class="card-title">Croissant à <span class="price">0,60$</span> <span class="text-muted old-price">1$<span> </h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="#" class="btn btn-success shadow-lg">J'en profite</a>
+                            </div>
+                          </div>
+                    </div>
+
+                    
+                </div>
+            </section>
+            <section class="mb-5">
+              <div class="row mb-2 py-5">
+                <div class="col-10">
+                  <h2>Magasin de vetements</h2>
+                </div>
+                <div class="col-2">
+                  <div class="float-right">
+                    <button class="btn btn-success rounded-circle" onclick="scrollingLeft()"><i class="fa fa-arrow-left fa-1x" style="color:#000000"></i></button>
+                  <button class="btn btn-success rounded-circle" onclick="scrollingRight()"><i class="fa fa-arrow-right fa-1x" style="color:#000000"></i></button>
+                  </div>
+                  
+                </div>
+                
+              
+                
+                
+              </div>
+              
+                <div class="img-cont" id="img-cont">
+                  <div class="img-etablisement px-2" style="width : 200px">
+                    <img class="img-fluid" src="img/adidas.jpg"/>
+                  </div>
+                  <div class="img-etablisement px-2" style="width : 200px">
+                    <img class="img-fluid" src="img/adidas.jpg"/>
+                  </div>
+                  <div class="img-etablisement px-2" style="width : 200px">
+                    <img class="img-fluid" src="img/adidas.jpg"/>
+                  </div>
+                  <div class="img-etablisement px-2" style="width : 200px">
+                    <img class="img-fluid" src="img/adidas.jpg"/>
+                  </div>
+                  <div class="img-etablisement px-2" style="width : 200px">
+                    <img class="img-fluid" src="img/adidas.jpg"/>
+                  </div>
+                  <div class="img-etablisement px-2" style="width : 200px">
+                    <img class="img-fluid" src="img/adidas.jpg"/>
+                  </div>
+                  <div class="img-etablisement px-2" style="width : 200px">
+                    <img class="img-fluid" src="img/adidas.jpg"/>
+                  </div>
+                  <div class="img-etablisement px-2" style="width : 200px">
+                    <img class="img-fluid" src="img/adidas.jpg"/>
+                  </div>
+                  <div class="img-etablisement px-2" style="width : 200px">
+                    <img class="img-fluid" src="img/adidas.jpg"/>
+                  </div>
+                  <div class="img-etablisement px-2" style="width : 200px">
+                    <img class="img-fluid" src="img/adidas.jpg"/>
+                  </div>
+                  <div class="img-etablisement px-2" style="width : 200px">
+                    <img class="img-fluid" src="img/adidas.jpg"/>
+                  </div>
+                  <div class="img-etablisement px-2" style="width : 200px">
+                    <img class="img-fluid" src="img/adidas.jpg"/>
+                  </div>
+                </div>
+            </section>
+            
+        </div>
+      
+        
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/4bd820fde1.js"></script>
+        <script>
+          function initialize() {
+              var input = document.getElementById('searchTextField');
+              new google.maps.places.Autocomplete(input);
+            }
+            
+            google.maps.event.addDomListener(window, 'load', initialize);
+              function myFunction(x) {
+                x.classList.toggle("change");
+              }
+      function changeNav() {
+          if(document.getElementById("mySidebar").style.width == "0px"){
+              document.getElementById("mySidebar").style.width = "250px";
+              
+          }
+          else{
+              document.getElementById("mySidebar").style.width = "0px";
+              
+          }
+      }
+  
+      function scrollingRight() {
+        document.getElementById("img-cont").scrollBy(200, 0);
+      }
+      function scrollingLeft() {
+        document.getElementById("img-cont").scrollBy(-200, 0);
+      }
+    </script>
+
+    </body>
+
+</html>
