@@ -64,9 +64,9 @@
                 <span class="badge badge-success">jogging</span>
                 
             </div>
-            <div class="trie py-2 ">
-              <button id="menu-btn" class="btn btn-success openbtn shadow-lg" onclick="openNav()">Filtrer</button> 
-              <form class="form-trie form-inline">
+            <div class="trie row py-2 ">
+              <button id="menu-btn" class="btn btn-success openbtn shadow-lg col-12" onclick="changeFiltre()">Filtrer</button> 
+              <form class="form-trie form-inline col-12 col-md-4">
                 <label for="trie">Trier par : </label>
                 <select class="custom-select mr-sm-2" id="trie">
                   <option selected>Popularité</option>
@@ -80,7 +80,7 @@
 
             <section>
               <div class="row">
-                <div id="filtre" class="filtre">
+                <div id="filtre" class="filtre shadow">
                   <div class="px-5 p-md-2">
                     <h5>Categorie</h5>
                     <form class="mb-5">
@@ -215,262 +215,101 @@
                     </div>
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-lg-3 col-md-2 col-lg-3 col-md-6 col-12">
-                                <div class=" produit border-0 mb-5" >
-                                    <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-                          
-                                      <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                            <div class="col-lg-3 col-md-6 col-12 produit-box">
+                                <div class=" produit border-0 mb-5 row" >
+                                  <div class="col-md-12 col-6 p-0">
+                                    <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">  
+                                  </div>
+                                  <div class="col-6 col-md-12 description ">
+                                      <h6 class="card-subtitle my-2 text-muted">chemise</h6>
                                       <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
-                                        
-                                      
-                                    
+                                  </div>
                                     <div class="add-panier text-center">
                                       <p>Ajouter au panier</p>
                                       <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
                                     </div>
                                 </div>
-                                
                             </div>
-                            <div class="col-lg-3 col-md-6 col-12">
-                              <div class=" produit border-0 mb-5" >
-                                  <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-                        
-                                    <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                            <div class="col-lg-3 col-md-6 col-12 produit-box">
+                              <div class=" produit border-0 mb-5 row" >
+                                <div class="col-md-12 col-6 p-0">
+                                  <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">  
+                                </div>
+                                <div class="col-6 col-md-12 description ">
+                                    <h6 class="card-subtitle my-2 text-muted">chemise</h6>
                                     <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
-                                      
-                                    
-                                  
+                                </div>
                                   <div class="add-panier text-center">
                                     <p>Ajouter au panier</p>
                                     <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
                                   </div>
                               </div>
-                              
                           </div>
-                          <div class="col-lg-3 col-md-6 col-12">
-                            <div class=" produit border-0 mb-5" >
-                                <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-                      
-                                  <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                          <div class="col-lg-3 col-md-6 col-12 produit-box">
+                            <div class=" produit border-0 mb-5 row" >
+                              <div class="col-md-12 col-6 p-0">
+                                <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">  
+                              </div>
+                              <div class="col-6 col-md-12 description ">
+                                  <h6 class="card-subtitle my-2 text-muted">chemise</h6>
                                   <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
-                                    
-                                  
-                                
+                              </div>
                                 <div class="add-panier text-center">
                                   <p>Ajouter au panier</p>
                                   <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
                                 </div>
                             </div>
-                            
                         </div>
-                        <div class="col-lg-3 col-md-6 col-12">
-                          <div class=" produit border-0 mb-5" >
-                              <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-                    
-                                <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                        <div class="col-lg-3 col-md-6 col-12 produit-box">
+                          <div class=" produit border-0 mb-5 row" >
+                            <div class="col-md-12 col-6 p-0">
+                              <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">  
+                            </div>
+                            <div class="col-6 col-md-12 description ">
+                                <h6 class="card-subtitle my-2 text-muted">chemise</h6>
                                 <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
-                                  
-                                
-                              
+                            </div>
                               <div class="add-panier text-center">
                                 <p>Ajouter au panier</p>
                                 <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
                               </div>
                           </div>
-                          
                       </div>
-                      <div class="col-lg-3 col-md-6 col-12">
-                                <div class=" produit border-0 mb-5" >
-                                    <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-                          
-                                      <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
-                                      <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
-                                        
-                                      
-                                    
-                                    <div class="add-panier text-center">
-                                      <p>Ajouter au panier</p>
-                                      <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                            <div class="col-lg-3 col-md-6 col-12">
-                              <div class=" produit border-0 mb-5" >
-                                  <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-                        
-                                    <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
-                                    <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
-                                      
-                                    
-                                  
-                                  <div class="add-panier text-center">
-                                    <p>Ajouter au panier</p>
-                                    <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
-                                  </div>
-                              </div>
-                              
+                      <div class="col-lg-3 col-md-6 col-12 produit-box">
+                        <div class=" produit border-0 mb-5 row" >
+                          <div class="col-md-12 col-6 p-0">
+                            <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">  
                           </div>
-                          <div class="col-lg-3 col-md-6 col-12">
-                            <div class=" produit border-0 mb-5" >
-                                <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-                      
-                                  <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
-                                  <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
-                                    
-                                  
-                                
-                                <div class="add-panier text-center">
-                                  <p>Ajouter au panier</p>
-                                  <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12">
-                          <div class=" produit border-0 mb-5" >
-                              <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-                    
-                                <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
-                                <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
-                                  
-                                
-                              
-                              <div class="add-panier text-center">
-                                <p>Ajouter au panier</p>
-                                <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
-                              </div>
-                          </div>
-                          
-                      </div>
-                      <div class="col-lg-3 col-md-6 col-12">
-                        <div class=" produit border-0 mb-5" >
-                            <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-                  
-                              <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                          <div class="col-6 col-md-12 description ">
+                              <h6 class="card-subtitle my-2 text-muted">chemise</h6>
                               <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
-                                
-                              
-                            
+                          </div>
                             <div class="add-panier text-center">
                               <p>Ajouter au panier</p>
                               <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
                             </div>
                         </div>
-                        
                     </div>
-                    <div class="col-lg-3 col-md-6 col-12">
-                      <div class=" produit border-0 mb-5" >
-                          <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-                
-                            <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
+                    <div class="col-lg-3 col-md-6 col-12 produit-box">
+                      <div class=" produit border-0 mb-5 row" >
+                        <div class="col-md-12 col-6 p-0">
+                          <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">  
+                        </div>
+                        <div class="col-6 col-md-12 description ">
+                            <h6 class="card-subtitle my-2 text-muted">chemise</h6>
                             <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
-                              
-                            
-                          
+                        </div>
                           <div class="add-panier text-center">
                             <p>Ajouter au panier</p>
                             <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
                           </div>
                       </div>
-                      
                   </div>
-                  <div class="col-lg-3 col-md-6 col-12">
-                    <div class=" produit border-0 mb-5" >
-                        <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-              
-                          <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
-                          <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
+
                             
-                          
-                        
-                        <div class="add-panier text-center">
-                          <p>Ajouter au panier</p>
-                          <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
+                           
+          
                         </div>
-                    </div>
-                    
-                </div>
-                <div class="col-lg-3 col-md-6 col-12">
-                  <div class=" produit border-0 mb-5" >
-                      <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-            
-                        <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
-                        <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
-                          
-                        
-                      
-                      <div class="add-panier text-center">
-                        <p>Ajouter au panier</p>
-                        <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
-                      </div>
-                  </div>
-                  
-              </div>
-              <div class="col-lg-3 col-md-6 col-12">
-                <div class=" produit border-0 mb-5" >
-                    <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-          
-                      <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
-                      <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
-                        
-                      
-                    
-                    <div class="add-panier text-center">
-                      <p>Ajouter au panier</p>
-                      <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-              <div class=" produit border-0 mb-5" >
-                  <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-        
-                    <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
-                    <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
-                      
-                    
-                  
-                  <div class="add-panier text-center">
-                    <p>Ajouter au panier</p>
-                    <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
-                  </div>
-              </div>
-              
-          </div>
-          <div class="col-lg-3 col-md-6 col-12">
-            <div class=" produit border-0 mb-5" >
-                <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-      
-                  <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
-                  <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
-                    
-                  
-                
-                <div class="add-panier text-center">
-                  <p>Ajouter au panier</p>
-                  <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
-                </div>
-            </div>
-            
-        </div>
-        <div class="col-lg-3 col-md-6 col-12">
-          <div class=" produit border-0 mb-5" >
-              <img class="img-fluid shadow" src="img/chaussures.jpg" alt="Card image cap">
-    
-                <h6 class="card-subtitle my-2 text-muted">Adidas f-50</h6>
-                <h5 class="card-title">80 $ <span class="text-muted old-price">120 $</span></h5>
-                  
-                
-              
-              <div class="add-panier text-center">
-                <p>Ajouter au panier</p>
-                <i class="fa fa-cart-plus fa-5x" style="color:#28a745"></i>
-              </div>
-          </div>
-          
-      </div>
       
                             
                         </div>
@@ -478,7 +317,7 @@
                     
                   </div>
                 </div>
-              </div>
+              
                 
                     
             </section>
@@ -506,8 +345,15 @@
         }
     }
 
-    function openNav() {
-      document.getElementById("filtre").style.width = "200px";
+    function changeFiltre() {
+      if(document.getElementById("filtre").style.width == "200px"){
+            document.getElementById("filtre").style.width = "0px";
+            
+        }
+        else{
+            document.getElementById("filtre").style.width = "200px";
+            
+        }
     }
 
     function closeNav() {
