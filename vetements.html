@@ -81,7 +81,7 @@
             <section>
               <div class="row">
                 <div id="filtre" class="filtre shadow">
-                  <div class="px-5 p-md-2">
+                  <div id="filtre-box" class="px-5 p-md-2">
                     <h5>Categorie</h5>
                     <form class="mb-5">
                       <div class="form-check">
@@ -360,11 +360,7 @@
       document.getElementById("filtre").style.width = "0";
     }
 
-    window.onclick = function(event) {
-  if (event.target != document.getElementById("filtre") && event.target != document.getElementById("menu-btn") && window.innerWidth < 768 ) {
-    document.getElementById("filtre").style.width = "0";
-  }
-}
+    
   </script>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -391,6 +387,12 @@
             }
             position = scroll;
           });
+
+          $(document).click(function(event) { 
+ if(!$(event.target).closest('#filtre, #menu-btn').length && $(document).innerWidth()<768) {
+      $('#filtre').css("width","0");
+ } 
+});
           
 
           
